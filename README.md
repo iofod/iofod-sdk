@@ -6,8 +6,6 @@ English | [简体中文](./README_CN.md)
 [![Build Status](https://img.shields.io/github/workflow/status/iofod/iofod-sdk/build)](https://github.com/iofod/iofod-sdk/actions)
 [![License](https://img.shields.io/github/license/iofod/iofod-sdk)](https://github.com/iofod/iofod-sdk/blob/main/LICENSE.md)
 
-https://img.shields.io/github/license/iofod/iofod-sdk
-
 The iofod SDK provides developers with the ability to interact with the main iofod interface within the Web worker, enabling rapid development of iofod extensions through the SDK. For detailed documentation please refer to: [Extension SDK](https://doc.iofod.com/#/en/9/02).
 
 ## Development Preparation

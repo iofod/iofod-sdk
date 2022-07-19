@@ -1,6 +1,7 @@
 # iofod-sdk
 
 [![Version](https://img.shields.io/github/package-json/v/iofod/iofod-sdk)](https://github.com/iofod/iofod-sdk/)
+[![NPM](https://img.shields.io/npm/v/iofod-sdk)](https://www.npmjs.com/package/iofod-sdk)
 [![Build Status](https://img.shields.io/github/workflow/status/iofod/iofod-sdk/build)](https://github.com/iofod/iofod-sdk/actions)
 [![License](https://img.shields.io/github/license/iofod/iofod-sdk)](https://github.com/iofod/iofod-sdk/blob/main/LICENSE.md)
 

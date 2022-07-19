@@ -1,5 +1,9 @@
 # iofod-sdk
 
+[![Version](https://img.shields.io/github/package-json/v/iofod/iofod-sdk)](https://github.com/iofod/iofod-sdk/)
+[![Build Status](https://img.shields.io/github/workflow/status/iofod/iofod-sdk/build)](https://github.com/iofod/iofod-sdk/actions)
+[![License](https://img.shields.io/github/license/iofod/iofod-sdk)](https://github.com/iofod/iofod-sdk/blob/main/LICENSE.md)
+
 iofod SDK 提供开发者在 Web worker 里与 iofod 主界面交互的能力，通过 SDK 来快速开发 iofod 拓展。详细文档请参考：[拓展 SDK](https://doc.iofod.cn/#/zh-cn/9/02)
 
 ## 开发准备
@@ -88,3 +92,9 @@ export async function clickBinding(e) {
 ## 更多
 
 更多内容请阅读[官方文档](https://doc.iofod.cn/#/zh-cn/9/01)获取，模板和案例可以参考官[方开源库](https://github.com/iofod/iofod-extensions)。
+
+## 许可证
+
+[BSD 3-Clause](https://github.com/iofod/iofod-sdk/blob/main/LICENSE.md)
+
+Copyright (c) 2021-present, iofod.

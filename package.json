@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "./dist/PLUS.cjs",
   "module": "./dist/PLUS.mjs",
+  "types": "./dist/PLUS.d.ts",
   "exports": {
     ".": {
       "require": "./dist/PLUS.cjs",

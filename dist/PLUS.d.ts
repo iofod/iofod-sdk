@@ -147,7 +147,7 @@ export interface ISelectItemCof extends Irender {
 }
 export type ISelectItem = ISelectItemCof;
 export interface IInputItemCof extends Irender {
-	value: unknown;
+	value: unknown | string;
 	name: string;
 	type?: string;
 	placeholder?: string;
@@ -174,7 +174,7 @@ export interface ISliderItemCof extends Irender {
 export type ISliderItem = ISliderItemCof;
 export type ISubHeader = string | IStringO;
 export type IHeader = string | IStringO;
-export type ILoading = string | IStringO;
+export type ILoading = string | IStringO | Irender;
 export interface ILinkCof extends IStringO {
 	name: string;
 }
@@ -194,13 +194,13 @@ export interface ITextareaCof extends IStringO {
 }
 export type ITextarea = ITextareaCof;
 export interface IUploadItemCof extends Irender {
-	value: unknown;
+	value: unknown | string;
 	multiple?: boolean;
 	accept?: string;
 }
 export type IUploadItem = IUploadItemCof;
 export interface IIFstructContainerCof extends Irender {
-	value: GlobalObject;
+	value: GlobalObject | string;
 	style?: ICSSO;
 	hoverStyle?: ICSSO;
 	subStyle?: ICSSO;
@@ -617,8 +617,7 @@ await PLUS.render([
 ```
 
 */
-export declare function render(struct: [
-]): Promise<boolean>;
+export declare function render(struct: IStruct[]): Promise<boolean>;
 /**
 The toast object mounts common methods for extending message notifications to users.
 */

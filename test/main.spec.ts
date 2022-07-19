@@ -419,6 +419,10 @@ describe('state', () => {
     const res = await PLUS.render([])
 
     expect(res).toEqual(true)
+
+    const res2 = await PLUS.render([PLUS.components.Text('Hello')])
+
+    expect(res2).toEqual(true)
   })
 })
 

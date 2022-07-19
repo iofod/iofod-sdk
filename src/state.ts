@@ -1,4 +1,4 @@
-import { GlobalObject, IStore, IConf } from './type'
+import { GlobalObject, IStore, IConf, IStruct } from './type'
 import { call } from './bridge'
 
 const store: IStore = {
@@ -220,7 +220,7 @@ await PLUS.render([
 ```
 
 */
-export function render(struct: []): Promise<boolean> {
+export function render(struct: IStruct[]): Promise<boolean> {
   return new Promise((done) => {
     call('STRUCT:INIT', { struct }, (data: boolean) => {
       done(data)

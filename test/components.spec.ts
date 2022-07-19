@@ -315,6 +315,19 @@ describe('event', () => {
         value: {},
       }).tag
     ).toEqual('IFstructContainer')
+
+    expect(
+      IFstructContainer({
+        dragAndDrop: true,
+        value: '$currentTree',
+        style: {
+          transform: 'scale(0.8)',
+          transformOrigin: 'left top',
+          minHeight: '50px',
+          margin: '4px 0',
+        },
+      }).tag
+    ).toEqual('IFstructContainer')
   })
   it('Code', () => {
     expect(

@@ -47,7 +47,7 @@ export interface IStringO extends Irender {
 }
 
 export interface IBooleanO extends Irender {
-  value: boolean
+  value: boolean | string
 }
 
 export interface ICSSO {
@@ -115,7 +115,7 @@ interface ISelectItemCof extends Irender {
 export type ISelectItem = ISelectItemCof
 
 interface IInputItemCof extends Irender {
-  value: unknown
+  value: unknown | string
   name: string
   type?: string
   placeholder?: string
@@ -145,7 +145,7 @@ export type ISliderItem = ISliderItemCof
 
 type ISubHeader = string | IStringO
 type IHeader = string | IStringO
-type ILoading = string | IStringO
+type ILoading = string | IStringO | Irender
 
 interface ILinkCof extends IStringO {
   name: string
@@ -169,14 +169,14 @@ interface ITextareaCof extends IStringO {
 export type ITextarea = ITextareaCof
 
 interface IUploadItemCof extends Irender {
-  value: unknown
+  value: unknown | string
   multiple?: boolean
   accept?: string
 }
 export type IUploadItem = IUploadItemCof
 
 interface IIFstructContainerCof extends Irender {
-  value: GlobalObject
+  value: GlobalObject | string
   style?: ICSSO
   hoverStyle?: ICSSO
   subStyle?: ICSSO

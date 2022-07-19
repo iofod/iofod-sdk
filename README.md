@@ -93,7 +93,7 @@ export async function clickBinding(e) {
 
 ## more
 
-For more content, please read the [official documentation](https://doc.iofod.com/#/en/9/01) for more information. Templates and examples can be found in the official [Fang Open Source Library](https://github.com/iofod/iofod-extensions).
+For more content, please read the [official documentation](https://doc.iofod.com/#/en/9/01) for more information. Templates and examples can be found in the official [Open Source Library](https://github.com/iofod/iofod-extensions).
 
 ## License
 

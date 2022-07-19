@@ -91,7 +91,7 @@ export async function clickBinding(e) {
 
 ## 更多
 
-更多内容请阅读[官方文档](https://doc.iofod.cn/#/zh-cn/9/01)获取，模板和案例可以参考官[方开源库](https://github.com/iofod/iofod-extensions)。
+更多内容请阅读[官方文档](https://doc.iofod.cn/#/zh-cn/9/01)获取，模板和案例可以参考[官方开源库](https://github.com/iofod/iofod-extensions)。
 
 ## 许可证
 

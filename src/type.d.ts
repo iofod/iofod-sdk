@@ -2,6 +2,29 @@ export interface GlobalObject {
   [key: string]: unknown
 }
 
+export interface IEvent extends GlobalObject {
+  type: string
+  value: string | boolean | GlobalObject | unknown | Transferable
+  clientX: number
+  clientY: number
+  offsetX: number
+  offsetY: number
+  pageX: number
+  pageY: number
+  screenX: number
+  screenY: number
+  x: number
+  y: number
+  dx: number
+  dy: number
+  altKey: boolean
+  shiftKey: boolean
+  ctrlKey: boolean
+  metaKey: boolean
+  timeStamp: number
+  transfer?: Transferable | GlobalObject | undefined | unknown
+}
+
 export interface IConf {
   state?: GlobalObject
   persisted?: boolean

@@ -329,5 +329,5 @@ const components = {
     return genStruct("Code", config, hook);
   }
 };
-const Version = "1.0.3";
+const Version = "1.0.4";
 export { Version, cache, call, checkAccess, checkAccessList, components, genStruct, getCurrentStyle, getState, init, log, off, on, once, pullStruct, reinit, render, requestAccess, setContext, setCurrentStyle, setState, setStruct, suid, toast, withAccess };

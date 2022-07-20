@@ -147,7 +147,7 @@ describe('event', () => {
 
     hanndle = triggerCustomEvent('testEvent', 'foo')
 
-    PLUS.on('EditorRedo', (res: any) => {
+    PLUS.on('EditorRedo', (res) => {
       expect(res).toEqual('bar')
 
       PLUS.off('EditorRedo')

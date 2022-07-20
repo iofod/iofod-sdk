@@ -1,4 +1,4 @@
-import { IFnListObject, IBcObject } from './type'
+import { IFnListObject, IBcObject, IEvent } from './type'
 
 let appid: string
 
@@ -33,8 +33,8 @@ PLUS.on('UpdateTree', res => {
 
 For supported events, please see: [Extension Available Events](https://doc.iofod.com/#/en//9/04.md)
 */
-// eslint-disable-next-line @typescript-eslint/ban-types
-export function on(event: string, fn?: Function) {
+// eslint-disable-next-line @typescript-eslint/ban-types, @typescript-eslint/no-explicit-any
+export function on(event: string, fn?: (e: IEvent) => any) {
   if (typeof fn != 'function') return
 
   if (handles[event]) {
@@ -51,7 +51,7 @@ export function on(event: string, fn?: Function) {
     channels[event] = new BroadcastChannel(eventName)
     channels[event].onmessage = (e) => {
       handles[event].forEach((fn) => {
-        fn(e.data)
+        fn(e.data as IEvent)
       })
     }
   }

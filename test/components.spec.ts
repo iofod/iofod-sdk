@@ -10,6 +10,7 @@ const {
   SwitchItem,
   Checkbox,
   SelectItem,
+  OptionGroup,
   InputItem,
   Canvas,
   SliderItem,
@@ -23,6 +24,7 @@ const {
   UploadItem,
   IFstructContainer,
   Code,
+  ColorPicker,
 } = components
 
 describe('event', () => {
@@ -160,6 +162,31 @@ describe('event', () => {
         'changeSelect'
       ).tag
     ).toEqual('SelectItem')
+  })
+  it('OptionGroup', () => {
+    expect(
+      OptionGroup(
+        {
+          name: 'Form',
+          value: '$select1',
+          options: [
+            {
+              value: 'op1',
+              label: 'op1',
+            },
+            {
+              value: 'op2',
+              label: 'op2',
+            },
+            {
+              value: 'op3',
+              label: 'op3',
+            },
+          ],
+        },
+        'changeOption'
+      ).tag
+    ).toEqual('OptionGroup')
   })
   it('InputItem', () => {
     expect(
@@ -351,5 +378,13 @@ describe('event', () => {
         'listenCopy'
       ).tag
     ).toEqual('Code')
+  })
+  it('ColorPicker', () => {
+    expect(
+      ColorPicker({
+        name: 'Color Picker',
+        value: '#ffffff',
+      }).tag
+    ).toEqual('ColorPicker')
   })
 })

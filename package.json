@@ -1,6 +1,6 @@
 {
   "name": "iofod-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/PLUS.cjs",
   "module": "./dist/PLUS.mjs",
   "types": "./dist/PLUS.d.ts",

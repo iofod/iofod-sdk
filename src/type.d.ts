@@ -2,6 +2,29 @@ export interface GlobalObject {
   [key: string]: unknown
 }
 
+export interface IEvent extends GlobalObject {
+  type: string
+  value: string | boolean | GlobalObject | unknown | Transferable
+  clientX: number
+  clientY: number
+  offsetX: number
+  offsetY: number
+  pageX: number
+  pageY: number
+  screenX: number
+  screenY: number
+  x: number
+  y: number
+  dx: number
+  dy: number
+  altKey: boolean
+  shiftKey: boolean
+  ctrlKey: boolean
+  metaKey: boolean
+  timeStamp: number
+  transfer?: Transferable | GlobalObject | undefined | unknown
+}
+
 export interface IConf {
   state?: GlobalObject
   persisted?: boolean
@@ -103,6 +126,10 @@ export type ICheckbox = string | boolean | ICheckboxCof
 interface IOptionsCof {
   value: unknown
   label: string
+  icon?: string
+  tip?: string
+  viewBox?: string
+  style?: ICSSO
   disabled?: boolean
 }
 interface ISelectItemCof extends Irender {
@@ -113,6 +140,13 @@ interface ISelectItemCof extends Irender {
   changeable?: boolean
 }
 export type ISelectItem = ISelectItemCof
+
+interface IOptionGroupCof extends Irender {
+  value: unknown
+  name: string
+  options: IOptionsCof[]
+}
+export type IOptionGroup = IOptionGroupCof
 
 interface IInputItemCof extends Irender {
   value: unknown | string
@@ -195,6 +229,12 @@ interface ICodeCof extends Irender {
 }
 export type ICode = string | ICodeCof
 
+interface IColorPickerCof extends Irender {
+  name: string
+  value: unknown | string
+}
+export type IColorPicker = IColorPickerCof
+
 export type IMatchCof =
   | string
   | boolean
@@ -206,6 +246,7 @@ export type IMatchCof =
   | ISwitchItem
   | ICheckbox
   | ISelectItem
+  | IOptionGroup
   | IInputItem
   | ICanvas
   | ISliderItem
@@ -218,6 +259,7 @@ export type IMatchCof =
   | IUploadItem
   | IIFstructContainer
   | ICode
+  | IColorPicker
 
 export interface IStruct {
   tag: string

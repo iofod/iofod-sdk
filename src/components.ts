@@ -7,6 +7,7 @@ import {
   ISwitchItem,
   ICheckbox,
   ISelectItem,
+  IOptionGroup,
   IInputItem,
   ICanvas,
   ISliderItem,
@@ -19,6 +20,7 @@ import {
   IUploadItem,
   IIFstructContainer,
   ICode,
+  IColorPicker,
 } from './type'
 import { genStruct } from './helper'
 
@@ -415,7 +417,7 @@ Description of the **options** object.
 | ---------- | ------- | ------------------------------------------------- |
 | value      | -       | The value of the option.                          |
 | label      | -       | The description text of the option.               |
-| disabled   | [ ]     | Controls the disabled state of the target option. |
+| disabled   | false   | Controls the disabled state of the target option. |
 
 Event:
 
@@ -470,6 +472,86 @@ export async function changeSelect(e) {
 */
   SelectItem(config: ISelectItem, hook?: string) {
     return genStruct('SelectItem', config, hook)
+  },
+  /**
+Option group component.
+
+Parameter:
+
+| Property | Default | Description                                                   |
+| -------- | ------- | ------------------------------------------------------------- |
+| value    | -       | The value of the target element.                              |
+| name     | -       | The title of the target element.                              |
+| options  | [ ]     | The configuration of the options, see the **options** object. |
+
+Description of the **options** object.
+
+| properties | default | description                                                                                            |
+| ---------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| value      | -       | The value of the option.                                                                               |
+| label      | -       | The description text of the option.                                                                    |
+| disabled   | false   | Controls the disabled state of the target option.                                                      |
+| icon       | -       | Configure the value of the vector path to display the icon, just as you would with the icon component. |
+| viewBox    | -       | If the option is of type icon, the viewBox property can be configured as if it were an SVG.            |
+| tip        | -       | Hover tips for options.                                                                                |
+| style      | { }     | The CSS style configuration for the options.                                                           |
+
+Event:
+
+| event  | description                                   |
+| ------ | --------------------------------------------- |
+| change | The value change event of the target element. |
+
+Example:
+
+```js
+const { OptionGroup } = PLUS.components;
+
+export async function main() {
+  await PLUS.init({
+    state: {
+      select1: "",
+    },
+  });
+
+  await PLUS.render([
+    OptionGroup(
+      {
+        name: 'Shape',
+        value: '$select1',
+        options: [
+          {
+            value: 0,
+            label: 's1',
+          },
+          {
+            value: 2,
+            label: 's2',
+          },
+          {
+            value: 3,
+            label: 's3',
+          },
+          {
+            value: 1,
+            label: 's4',
+            viewBox: '0 0 145 24',
+            icon: 'M0 2H22V21C22 21.5523 22.4477 22 23 22H121C121.552 22 122 21.5523 122 21V2H145',
+          },
+        ],
+      },
+      "changeSelect"
+    ),
+  ]);
+}
+
+export async function changeSelect(e) {
+  console.log(e);
+}
+```
+*/
+  OptionGroup(config: IOptionGroup, hook?: string) {
+    return genStruct('OptionGroup', config, hook)
   },
 
   /**
@@ -1161,5 +1243,52 @@ export async function listenCopy(e) {
 */
   Code(config: ICode, hook?: string) {
     return genStruct('Code', config, hook)
+  },
+  /**
+Colour picker component.
+
+Parameter:
+
+| Property | Default | Description                      |
+| -------- | ------- | -------------------------------- |
+| value    | -       | The value of the target element. |
+| name     | -       | The title of the target element. |
+
+Event:
+
+| Event | Description                               |
+| ----- | ----------------------------------------- |
+| input | Triggers an event when the color changes. |
+
+Example:
+
+```js
+const { ColorPicker } = PLUS.components;
+
+export async function main() {
+  await PLUS.init({
+    state: {
+      color: "#ffffff",
+    },
+  });
+
+  await PLUS.render([
+    ColorPicker(
+      {
+        name: 'Color',
+        value: '$color',
+      },
+      "changeColor"
+    ),
+  ]);
+}
+
+export async function changeColor(e) {
+  console.log(e);
+}
+```
+*/
+  ColorPicker(config: IColorPicker, hook?: string) {
+    return genStruct('ColorPicker', config, hook)
   },
 }

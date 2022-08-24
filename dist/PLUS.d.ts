@@ -95,6 +95,7 @@ export interface IOptionsCof {
 	tip?: string;
 	viewBox?: string;
 	style?: ICSSO;
+	wrapStyle?: ICSSO;
 	disabled?: boolean;
 }
 export interface ISelectItemCof extends Irender {
@@ -108,6 +109,7 @@ export type ISelectItem = ISelectItemCof;
 export interface IOptionGroupCof extends Irender {
 	value: unknown;
 	name: string;
+	style?: ICSSO;
 	options: IOptionsCof[];
 }
 export type IOptionGroup = IOptionGroupCof;
@@ -1309,6 +1311,7 @@ export declare const components: {
   | -------- | ------- | ------------------------------------------------------------- |
   | value    | -       | The value of the target element.                              |
   | name     | -       | The title of the target element.                              |
+  | style    | { }     | The CSS style configuration of the target element.            |
   | options  | [ ]     | The configuration of the options, see the **options** object. |
   
   Description of the **options** object.
@@ -1322,6 +1325,7 @@ export declare const components: {
   | viewBox    | -       | If the option is of type icon, the viewBox property can be configured as if it were an SVG.            |
   | tip        | -       | Hover tips for options.                                                                                |
   | style      | { }     | The CSS style configuration for the options.                                                           |
+  | wrapStyle  | { }     | The CSS style configuration for the options container.                                                 |
   
   Event:
   
@@ -2076,6 +2080,6 @@ export declare const components: {
   */
 	ColorPicker(config: IColorPicker, hook?: string): IStruct;
 };
-export declare const Version = "1.0.4";
+export declare const Version = "1.0.6";
 
 export {};

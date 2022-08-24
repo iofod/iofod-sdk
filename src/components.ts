@@ -482,6 +482,7 @@ Parameter:
 | -------- | ------- | ------------------------------------------------------------- |
 | value    | -       | The value of the target element.                              |
 | name     | -       | The title of the target element.                              |
+| style    | { }     | The CSS style configuration of the target element.            |
 | options  | [ ]     | The configuration of the options, see the **options** object. |
 
 Description of the **options** object.
@@ -495,6 +496,7 @@ Description of the **options** object.
 | viewBox    | -       | If the option is of type icon, the viewBox property can be configured as if it were an SVG.            |
 | tip        | -       | Hover tips for options.                                                                                |
 | style      | { }     | The CSS style configuration for the options.                                                           |
+| wrapStyle  | { }     | The CSS style configuration for the options container.                                                 |
 
 Event:
 

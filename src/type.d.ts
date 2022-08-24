@@ -130,6 +130,7 @@ interface IOptionsCof {
   tip?: string
   viewBox?: string
   style?: ICSSO
+  wrapStyle?: ICSSO
   disabled?: boolean
 }
 interface ISelectItemCof extends Irender {
@@ -144,6 +145,7 @@ export type ISelectItem = ISelectItemCof
 interface IOptionGroupCof extends Irender {
   value: unknown
   name: string
+  style?: ICSSO
   options: IOptionsCof[]
 }
 export type IOptionGroup = IOptionGroupCof

@@ -10,3 +10,7 @@ All notable changes to the "iofod-sdk" project will be documented in this file.
 
 - Add ColorPicker component
 - Add OptionGroup component
+
+## [1.0.6] - 2022-08-24
+
+- Update OptionGroup component

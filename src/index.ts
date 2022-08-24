@@ -7,4 +7,4 @@ export * from './toast'
 export * from './cache'
 export * from './components'
 
-export const Version = '1.0.4'
+export const Version = '1.0.6'

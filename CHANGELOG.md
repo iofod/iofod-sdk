@@ -14,3 +14,7 @@ All notable changes to the "iofod-sdk" project will be documented in this file.
 ## [1.0.6] - 2022-08-24
 
 - Update OptionGroup component
+
+## [1.0.6] - 2022-11-10
+
+- Add registerModelHelper and registerModelTooltip

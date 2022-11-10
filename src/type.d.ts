@@ -268,3 +268,62 @@ export interface IStruct {
   value?: unknown | string | number | boolean | GlobalObject | IMatchCof
   hook?: string
 }
+
+type IHelperBaseType = boolean | string | number
+
+interface IModelBaseConf {
+  type: string
+  use: string
+  default: IHelperBaseType
+}
+
+interface IHelperSelectConf extends IModelBaseConf {
+  options: IHelperBaseType[]
+  labels: string[]
+  filterable?: boolean
+}
+
+interface IHelperSliderConf extends IModelBaseConf {
+  range: number[],
+  step: number
+}
+
+export type IModelHelper = {
+  config: IHelperSelectConf | IHelperSliderConf
+  force?: boolean
+}
+
+interface I18nConf {
+  cs?: string
+  da?: string
+  de?: string
+  el?: string
+  en?: string
+  es?: string
+  fi?: string
+  fr?: string
+  he?: string
+  hu?: string
+  it?: string
+  ja?: string
+  ko?: string
+  nl?: string
+  no?: string
+  pl?: string
+  pt?: string
+  ru?: string
+  sl?: string
+  sv?: string
+  tr?: string
+  zh?: string
+}
+
+interface IModelTooltipConf {
+  type: string
+  i18n: I18nConf
+}
+
+export type IModelTooltip = {
+  config: IModelTooltipConf
+  force?: boolean
+}

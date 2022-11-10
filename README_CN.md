@@ -98,4 +98,4 @@ export async function clickBinding(e) {
 
 [BSD 3-Clause](https://github.com/iofod/iofod-sdk/blob/main/LICENSE.md)
 
-Copyright (c) 2021-present, iofod.
+Copyright (c) 2022-present, iofod.

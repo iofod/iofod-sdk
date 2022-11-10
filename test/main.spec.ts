@@ -77,6 +77,8 @@ global.postMessage = function (conf: {
 
       case 'DATA:SET':
       case 'DATA:SET_CURRENT_STYLE':
+      case 'UI:REGISTER_MODEL_HELPER':
+      case 'UI:REGISTER_MODEL_TOOLTIP':
         triggerCustomEvent(id, Res)
 
         break
@@ -321,6 +323,53 @@ describe('helper', () => {
     })
   })
 
+  it('helper.registerModelHelper', (done) => {
+    PLUS.registerModelHelper({
+      config: {
+        type: 'iofod/slider',
+        use: 'Slider',
+        range: [0, 100],
+        step: 2,
+        default: 0
+      },
+      force: false
+    }).then((res) => {
+      expect(res.code).toEqual(0)
+
+      PLUS.registerModelHelper({
+        config: {
+          type: 'iofod/select',
+          use: 'Select',
+          options: ['1', '2', '3'],
+          labels: ['P1', 'P2', 'P3'],
+          filterable: false,
+          default: 0
+        },
+        force: false
+      }).then((res) => {
+        expect(res.code).toEqual(0)
+
+        done()
+      })
+    })
+  })
+
+  it('helper.registerModelTooltip', (done) => {
+    PLUS.registerModelTooltip({
+      config: {
+        type: 'iofod/tip1',
+        i18n: {
+          en: 'This is a test tip',
+        }
+      },
+      force: false
+    }).then((res) => {
+      expect(res.code).toEqual(0)
+
+      done()
+    })
+  })
+
   it('helper.log', (done) => {
     PLUS.log({
       params1: 'params1',
@@ -358,7 +407,7 @@ describe('state', () => {
 
     expect(
       PLUS.setState({
-        bar: 2333,
+        bar: 2333
       })
     ).toEqual(true)
 

@@ -566,7 +566,7 @@ Parameter:
 | value       | -                                 | The value of the input box.                                     |
 | type        | -                                 | The form type of the input box.                                 |
 | name        | -                                 | The title of the input box.                                     |
-| placeholder | - - The prompt for the input box. |
+| placeholder | -                                 | The prompt for the input box.                                   |
 | disabled    | false                             | Controls the disabled state of the input box.                   |
 | readonly    | false                             | Controls the read-only state of the input box.                  |
 | useHelper   | false                             | Controls the display state of the filler tool in the input box. |
@@ -912,7 +912,7 @@ export async function main() {
 
   await PLUS.render([
     Link({
-      name: '$name'
+      name: '$name',
       value: 'https://www.google.com'
     })
   ])
